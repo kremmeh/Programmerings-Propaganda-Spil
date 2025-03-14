@@ -716,7 +716,7 @@ GameObject:
   - component: {fileID: 732233186}
   - component: {fileID: 732233185}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Bertram Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
