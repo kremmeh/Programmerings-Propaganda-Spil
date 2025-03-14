@@ -1,18 +1,18 @@
-//SKAL BRUGES HVER GANG SPILLEREN SKAL KUNNE SKIFTE SCENE!!!
-
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class sceneChanger : MonoBehaviour
 {
-    public string loadScene;
-    private void OnTriggerEnter(Collider other)
+
+    public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            SceneManager.LoadScene(loadScene);
+        if(other.gameObject.name.Contains("tp")){
+            int temp = int.Parse(other.gameObject.name.Substring(2));
+            SceneManager.LoadScene(temp);
         }
+        
     }
-} 
+}
