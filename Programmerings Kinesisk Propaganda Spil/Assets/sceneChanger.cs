@@ -1,3 +1,5 @@
+//SPiller karakteren SKAL have dette script for at kunne teleporte imellem scenerne
+
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
