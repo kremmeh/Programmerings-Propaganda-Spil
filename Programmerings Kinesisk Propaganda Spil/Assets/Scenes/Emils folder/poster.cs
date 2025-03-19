@@ -11,6 +11,7 @@ public class poster : MonoBehaviour
     {
         t[0].SetActive(false);
         t[1].SetActive(false);
+        t[2].SetActive(false);
     }
 
     // Update is called once per frame
