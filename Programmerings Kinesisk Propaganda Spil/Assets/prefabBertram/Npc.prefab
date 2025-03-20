@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 4418008453784164767}
   - component: {fileID: 555863777986908038}
   - component: {fileID: 8411967501687015030}
-  - component: {fileID: 7039663608246390222}
   m_Layer: 0
   m_Name: Npc
   m_TagString: Untagged
@@ -131,16 +130,3 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &7039663608246390222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1663252512796994236}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 599913506b844da41933656392035f2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}

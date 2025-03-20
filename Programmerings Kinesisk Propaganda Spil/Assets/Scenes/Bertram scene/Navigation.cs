@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Navigation : MonoBehaviour
 {
     public Transform[] player;
     private NavMeshAgent agent;

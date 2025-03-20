@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class poster : MonoBehaviour
+public class Poster : MonoBehaviour
 {
     bool isActive = false;
     public GameObject[] t;
