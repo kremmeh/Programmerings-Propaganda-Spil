@@ -9,6 +9,7 @@ namespace Assets.Scenes.Btest
     {
         public NavMeshAgent agent;
         public float range;
+        public bool isTalking = false;
 
         public Transform centrePoint;
 
@@ -20,15 +21,19 @@ namespace Assets.Scenes.Btest
         // Update is called once per frame
         void Update()
         {
-            if (agent.remainingDistance <= agent.stoppingDistance) //done with path
+            if (!isTalking)
             {
-                if (RandomPoint(centrePoint.position, range, out Vector3 point)) //pass in our centre point and radius of area
+                if (agent.remainingDistance <= agent.stoppingDistance) //done with path
                 {
-                    Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f); //so you can see with gizmos
-                    agent.SetDestination(point);
+                    if (RandomPoint(centrePoint.position, range, out Vector3 point)) //pass in our centre point and radius of area
+                    {
+                        Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f); //so you can see with gizmos
+                        agent.SetDestination(point);
+                    }
                 }
-            }
 
+            }else
+                agent.velocity = Vector3.zero;
         }
         bool RandomPoint(Vector3 center, float range, out Vector3 result)
         {
@@ -46,5 +51,20 @@ namespace Assets.Scenes.Btest
             result = Vector3.zero;
             return false;
         }
+
+        public void startTalking()
+        {
+
+            isTalking = true;
+
+        }
+
+        public void stopTalking() 
+        { 
+            isTalking = false; 
+        }
     }
+
+   
+
 }
