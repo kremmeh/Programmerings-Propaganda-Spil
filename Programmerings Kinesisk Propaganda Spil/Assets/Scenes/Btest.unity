@@ -857,6 +857,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 149705718}
   range: 30
+  isTalking: 0
   centrePoint: {fileID: 1477996801}
 --- !u!114 &149705723
 MonoBehaviour:
@@ -4945,6 +4946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 1562317583}
   range: 30
+  isTalking: 0
   centrePoint: {fileID: 1720911524}
 --- !u!114 &1562317588
 MonoBehaviour:
@@ -6086,6 +6088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31cddf08a5e3f2645aa905cba36b7cd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInteracting: 0
 --- !u!1 &2045845790
 GameObject:
   m_ObjectHideFlags: 0
