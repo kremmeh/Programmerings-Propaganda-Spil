@@ -32,4 +32,6 @@ public class NPC : MonoBehaviour
         this.gameObject.GetComponent<AIRandomMovement>().stopTalking();
         prefab.SetActive(false);
     }
+
+   
 }

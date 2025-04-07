@@ -30,7 +30,7 @@ public class popup : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("POP" + other.gameObject.tag);
+            
             if (other.gameObject.CompareTag("pop"))
             {
                
