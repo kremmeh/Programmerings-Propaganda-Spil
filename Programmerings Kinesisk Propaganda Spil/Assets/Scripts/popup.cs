@@ -28,12 +28,12 @@ public class popup : MonoBehaviour
     {
         
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-
+            Debug.Log("POP" + other.gameObject.tag);
             if (other.gameObject.CompareTag("pop"))
             {
-                
+               
                 prefab.gameObject.SetActive(true);
                 text.text = "" + data.dText[other.GetComponent<Collider>().gameObject.name];
                 isActive = !isActive;
@@ -41,5 +41,6 @@ public class popup : MonoBehaviour
             }
 
         }
+        
     }
 }

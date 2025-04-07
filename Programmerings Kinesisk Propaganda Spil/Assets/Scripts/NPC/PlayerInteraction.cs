@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
+   
     public bool isInteracting = false;
-
+    public GameObject prefab;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -20,6 +22,7 @@ public class PlayerInteraction : MonoBehaviour
                     {
                         npcInteractable.Interact();
                         isInteracting = true;
+                       
                     }else {
                         npcInteractable.StopInteract();
                         isInteracting = false;
@@ -28,6 +31,7 @@ public class PlayerInteraction : MonoBehaviour
 
 
             }
+
         }
     }
 }
