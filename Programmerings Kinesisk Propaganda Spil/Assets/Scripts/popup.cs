@@ -43,4 +43,8 @@ public class popup : MonoBehaviour
         }
         
     }
+    public void OnTriggerExit(Collider other)
+    {
+        prefab.gameObject.SetActive(false);
+    }
 }

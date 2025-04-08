@@ -7,10 +7,10 @@ public class PlayerInteraction : MonoBehaviour
 {
    
     public bool isInteracting = false;
-    public GameObject prefab;
     private NPC currentNPC = null;
     private float interactRange = 2f;
     private float leaveRange = 4f;
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
