@@ -8,11 +8,14 @@ public class PlayerInteraction : MonoBehaviour
    
     public bool isInteracting = false;
     public GameObject prefab;
+    private NPC currentNPC = null;
+    private float interactRange = 2f;
+    private float leaveRange = 4f;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            float interactRange = 2f;
+            
             Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
             foreach (Collider collider in colliderArray)
             {
@@ -22,16 +25,31 @@ public class PlayerInteraction : MonoBehaviour
                     {
                         npcInteractable.Interact();
                         isInteracting = true;
-                       
-                    }else {
+                        currentNPC = npcInteractable;
+
+                    }
+                    else {
                         npcInteractable.StopInteract();
                         isInteracting = false;
+                        currentNPC = null;
                     }
+                    break;
                 }
 
 
             }
 
         }
+        if (isInteracting && currentNPC != null)
+        {
+            float distance = Vector3.Distance(transform.position, currentNPC.transform.position);
+            if (distance > leaveRange)
+            {
+                currentNPC.StopInteract();
+                isInteracting = false;
+                currentNPC = null;
+            }
+        }
     }
 }
+
